@@ -1,0 +1,48 @@
+List the components of Hadoop 2.x and explain them in detail.
+
+  Hadoop is a distributed file system which is specially to run on a low cost system.it is much similar to the existing file system.
+it is low cost hardware which is highly fault tolerance and can under on a low cost commodity.It can access a huge data and it is appliacble 
+for all data which is in huge number i.e.large set data. And regarding scalability it could be flexible upto 10,000 nodes.as well it can be
+integartaed to work with third party application.in case of Hadoop HDFS and Map Reduction is known as HDFS2 annd MP2.Instead of job tracker an task
+tracker YARN is used for resourse management.
+
+HDFS has three pillars and they are:
+                                    1.)HDFS
+                                    2.)YARN
+                                    3.)Map Reduction
+
+1.)HDFS: Hadoop distributed File system is known as HDFS v2.its component is known as name node and metadata is used to store the name node.
+it has two namenodes one is active and one is standby.and active node is used to take care of client operation and to manage the metadata
+standby namenode is used which is similar to hadoop 1.x. it is an alternate process when active node gets down the standby node will do 
+the process of taking care of client operation.
+
+
+2.)YARN (Yet Another Resourse Negotiator):
+        
+        It is just a technique for cluster management.And in Hadoop 2.X version there is a key feature 
+for YARN which is of Apache Soft\ware foundation a open source distributed framework which was descriped by apache as a form of redesigned 
+network.Hadoop clusture management is known as cluster esourse management which menas CPU,Memeory etc.And this cluster resourse is now taken
+from map reduction to YARN and the job of map reduction is to perform the operation of data processing only.
+
+      In case of Hadoop 1.X cluster resorse managemant has a tight coupling with map reduction. job tracker is  a part of map reduction.
+which does the job of job tracker. so the job tracker takes the responsibility for map reduction and cluster resource .it'sit will allocate slot for 
+each process ,runs those process and monitors thse process.once the task gets over the job tracker will clean all the pre filled slots to
+make it available for upcoming work where the task need to be filled again.
+
+     By 2010,YARN is usd as a sub-project which couples the rewrite process of map reduction resourse managementas well scheduling from
+data process components.which makes hadoop to supprt many varied approach and more number of application.The major purpose of YARN is
+that the applications connected with YARN will use the agents of node manager which will monitor the cluster nodes.by running commodiy
+hardware the YARN will attract a large amount of structured as well unstructred data for analytical application.YARN is seperated from
+map reduce by seperating HDFS which makes YARN more suitable for mny operational applications.
+  
+  
+3.)Map Reduction: 
+
+    In map reduction the tasks were divided into number of of tasks by mappers and reducers.and the tasks were made to run on machine
+and these machines will have some already defined tasks as wll limited slots for task running process.where it's early version is called 
+as MR1 in version 1.and now MR2. And it does not need any sort of job or task tracker since from the introduction of YARN.
+
+  The MR2 when comparred to MR1 havea isolaed framework whereas, MR2 s a distributed application which is capable to run framework of
+map reduction on the top of YARN.and so map reduction is generic when compared to YARN
+ 
+
